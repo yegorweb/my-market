@@ -11,7 +11,11 @@ export default defineNuxtConfig({
     head: {
       title: 'МойМаркет',
       link: [{ rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }]
-    }
+    },
+    pageTransition: {  },
+  },
+  devServer: {
+    port: 3040
   },
   modules: [
     ['@nuxtjs/google-fonts', {
