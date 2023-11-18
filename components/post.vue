@@ -61,7 +61,7 @@ let like = ref(false)
   transition: .2s;
 
   &:hover {
-    box-shadow: 0px 10px 40px 5px rgba(34, 60, 80, 0.16);
+    box-shadow: 0px 10px 50px 10px rgba(34, 60, 80, 0.14);
   }
 }
 </style>
