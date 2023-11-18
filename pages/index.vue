@@ -3,7 +3,7 @@
 <template>
   <v-container>
     <v-row>
-      <v-col v-for="item in 10" cols="6" md="4" lg="3">
+      <v-col v-for="item in 10" cols="6" sm="4" md="3">
         <Post />
       </v-col>
     </v-row>
