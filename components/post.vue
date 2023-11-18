@@ -1,4 +1,8 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { ref } from 'vue'
+
+let like = ref(false)
+</script>
 
 <template>
   <div class="container">
@@ -11,6 +15,15 @@
       >
         Картошка
       </div>
+
+      <v-icon
+        @click="like = !like"
+        style="position: absolute; padding: 4px; top: 12px; right: 14px;"
+        :icon="like ? 'mdi-heart' : 'mdi-heart-outline'" 
+        :color="like ? 'red' : 'black'"
+        variant="text"
+        :ripple="false"
+      />
 
       <div 
         class="mt-1" 
