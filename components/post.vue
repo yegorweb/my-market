@@ -35,6 +35,7 @@
 
 <style scoped lang="scss">
 .container {
+  cursor: pointer;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -43,6 +44,11 @@
   height: 100%;
   background: #FFFFFF;
   border-radius: 12px;
-  box-shadow: 0px 10px 40px 5px rgba(34, 60, 80, 0.10);
+  box-shadow: 0px 10px 40px 5px rgba(34, 60, 80, 0.08);
+  transition: .2s;
+
+  &:hover {
+    box-shadow: 0px 10px 40px 5px rgba(34, 60, 80, 0.16);
+  }
 }
 </style>
