@@ -1,7 +1,7 @@
 <script lang="ts" setup></script>
 
 <template>
-  <v-app>
+  <v-app style="padding-bottom: 100px;">
     <Header />
     <slot />
   </v-app>
