@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   build: {
     transpile: ['vuetify'],
   },
-  css: ['~/styles/main.scss'],
+  css: ['~/assets/styles/main.scss'],
   app: {
     head: {
       link: [{ rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }]
