@@ -8,7 +8,6 @@ export default defineNuxtConfig({
   css: ['~/styles/main.scss'],
   app: {
     head: {
-      title: 'МойМаркет',
       link: [{ rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }]
     },
     pageTransition: {  },
