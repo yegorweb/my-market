@@ -1,15 +1,17 @@
 import defu from "defu"
+import { UseFetchOptions } from "nuxt/app"
 
-export const useFetchApi = (url, options) => {
+export const useFetchApi = (url, options = {}) => {
   const config = useRuntimeConfig()
 
   const defaults = {
     baseURL: config.public.apiBase,
-    async onRequest({ request, options }) {
-        const { data } = await useFetch('/api/access-token')
-
-        options.headers = options.headers || {}
-        options.headers.authorization = `Bearer ${data.value.token}`
+    async onRequest({ options }) {
+      if (process.server || !localStorage.getItem('token'))
+        return
+      
+      options.headers = options.headers || {}
+      options.headers.authorization = `Bearer ${data.value.token}`
     },
     async onResponseError({ response }) {
       if (response.status == 401) {

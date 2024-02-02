@@ -6,7 +6,9 @@ export default defineNuxtPlugin(async (nuxtApp) => {
 		return {}
 	}
 
-	const { data: user, refresh } = await useApiFetch<User>('/api/auth/refresh')
+	const { data: user, refresh } = await useFetchApi('/api/auth/refresh', {
+		onResponse()
+	})
 
 	const redirectTo = useState("authRedirect")
 
